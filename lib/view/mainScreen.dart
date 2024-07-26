@@ -12,7 +12,7 @@ class Mainscreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(
-              height: 80,
+              height: 60,
             ),
             Text(
               "Meme #21",
