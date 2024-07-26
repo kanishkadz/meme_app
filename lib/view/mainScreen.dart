@@ -5,6 +5,15 @@ class Mainscreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Column(
+        children: [
+          Text("Meme #21"),
+          Text("Target 500 memes"),
+          Image.network("src"),
+          ElevatedButton(onPressed: (){}, child: Text("More Fun !!"))
+        ],
+      ),
+    );
   }
 }
