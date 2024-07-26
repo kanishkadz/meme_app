@@ -7,12 +7,13 @@ class splashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.network("https://images.theconversation.com/files/38926/original/5cwx89t4-1389586191.jpg?ixlib=rb-4.1.0&q=45&auto=format&w=926&fit=clip"),
           SizedBox(height: 30,),
-          Text("SED LYF"),
+          Text("SED LYF", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
           Text("A Meme App !!"),
         ],
       )),
