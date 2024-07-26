@@ -6,6 +6,14 @@ class splashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Center(child: Column(
+        children: [
+          Image.network("https://images.theconversation.com/files/38926/original/5cwx89t4-1389586191.jpg?ixlib=rb-4.1.0&q=45&auto=format&w=926&fit=clip"),
+          Text("SED LYF"),
+          Text("A Meme App !!"),
+        ],
+      )),
+    );
   }
 }
