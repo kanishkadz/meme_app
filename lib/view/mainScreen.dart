@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meme_app/controller/fetchMeme.dart';
+import 'package:meme_app/controller/saveMyData.dart';
 
 class Mainscreen extends StatefulWidget {
   const Mainscreen({super.key});
@@ -17,12 +18,21 @@ class _MainscreenState extends State<Mainscreen> {
     });
   }
   String imgUrl = "";
+  int? memeNo;
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
+    GetInitMemeNo();
     UpdateImg();
+  }
+
+  GetInitMemeNo() async{
+    memeNo = await Savemydata.fetchData() ?? 0;
+    setState(() {
+
+    });
   }
 
   @override
@@ -52,7 +62,9 @@ class _MainscreenState extends State<Mainscreen> {
               height: 20,
             ),
             ElevatedButton(
-                onPressed: () {
+                onPressed: () async{
+                  await Savemydata.saveData(memeNo!+1);
+                  GetInitMemeNo();
                   UpdateImg();
                 },
                 child: Container(
