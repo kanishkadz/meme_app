@@ -9,7 +9,21 @@ class Mainscreen extends StatefulWidget {
 }
 
 class _MainscreenState extends State<Mainscreen> {
-  String imgUrl = "https://preview.redd.it/b7ek606dlefd1.png?width=108";
+
+  void UpdateImg()async{
+    String getImgUrl = await FetchMeme.fetchNewMeme();
+    setState(() {
+      imgUrl = getImgUrl;
+    });
+  }
+  String imgUrl = "";
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    UpdateImg();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +53,7 @@ class _MainscreenState extends State<Mainscreen> {
             ),
             ElevatedButton(
                 onPressed: () {
-
+                  UpdateImg();
                 },
                 child: Container(
                     height: 50,

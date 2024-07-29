@@ -9,6 +9,7 @@ class FetchMeme{
     print(response.body);
 
     Map body_data = jsonDecode(response.body);
+    return body_data["url"];
     print(body_data["url"]);
 
   }
