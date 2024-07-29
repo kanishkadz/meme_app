@@ -15,10 +15,12 @@ class _MainscreenState extends State<Mainscreen> {
     String getImgUrl = await FetchMeme.fetchNewMeme();
     setState(() {
       imgUrl = getImgUrl;
+      isLoading = false;
     });
   }
   String imgUrl = "";
   int? memeNo;
+  bool isLoading = true;
 
   @override
   void initState() {
@@ -57,7 +59,7 @@ class _MainscreenState extends State<Mainscreen> {
             SizedBox(
               height: 20,
             ),
-            Image.network(imgUrl),
+            Image.network(imgUrl, height : 300, width: MediaQuery.of(context).size.width,),
             SizedBox(
               height: 20,
             ),
