@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:meme_app/controller/fetchMeme.dart';
 
-class Mainscreen extends StatelessWidget {
+class Mainscreen extends StatefulWidget {
   const Mainscreen({super.key});
+
+  @override
+  State<Mainscreen> createState() => _MainscreenState();
+}
+
+class _MainscreenState extends State<Mainscreen> {
+  String imgUrl = "https://preview.redd.it/b7ek606dlefd1.png?width=108";
 
   @override
   Widget build(BuildContext context) {
@@ -26,14 +33,13 @@ class Mainscreen extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            Image.network(
-                "https://images.theconversation.com/files/38926/original/5cwx89t4-1389586191.jpg?ixlib=rb-4.1.0&q=45&auto=format&w=926&fit=clip"),
+            Image.network(imgUrl),
             SizedBox(
               height: 20,
             ),
             ElevatedButton(
                 onPressed: () {
-                  FetchMeme().fetchNewMeme();
+
                 },
                 child: Container(
                     height: 50,
