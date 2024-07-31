@@ -15,7 +15,7 @@ class splashScreen extends StatelessWidget {
               height : 300,
               "https://raw.githubusercontent.com/codewithdhruv22/CodeWithDhruv/main/applogo.png"),
           SizedBox(height: 30,),
-          Text("UnSad App" , style: TextStyle(fontSize: 35 , fontWeight: FontWeight.bold),)
+          Text("A Meme App" , style: TextStyle(fontSize: 35 , fontWeight: FontWeight.bold),)
         ],
       ),
     );
