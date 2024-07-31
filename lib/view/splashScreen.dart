@@ -13,7 +13,7 @@ class splashScreen extends StatelessWidget {
           Image.network(
               width : MediaQuery.of(context).size.width,
               height : 300,
-              "https://raw.githubusercontent.com/codewithdhruv22/CodeWithDhruv/main/applogo.png"),
+              "https://i.kym-cdn.com/photos/images/original/001/513/512/ae3.png"),
           SizedBox(height: 30,),
           Text("A Meme App" , style: TextStyle(fontSize: 35 , fontWeight: FontWeight.bold),)
         ],

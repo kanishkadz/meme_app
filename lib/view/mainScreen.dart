@@ -45,72 +45,74 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SizedBox(height: 120),
-            Text(
-              "Meme #${memeNo.toString()}",
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
-            ),
-            SizedBox(height: 10),
-            Text(
-              "Target ${targetMeme} Memes",
-              style: TextStyle(fontSize: 18),
-            ),
-            SizedBox(height: 30),
-            isLoading
-                ? Container(
-              height: 400,
-              width: MediaQuery.of(context).size.width,
-              child: Center(
-                child: SizedBox(
-                  height: 60,
-                  width: 60,
-                  child: CircularProgressIndicator(),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(height: 20),
+              Text(
+                "Meme #${memeNo.toString()}",
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
+              ),
+              SizedBox(height: 10),
+              Text(
+                "Target ${targetMeme} Memes",
+                style: TextStyle(fontSize: 18),
+              ),
+              SizedBox(height: 20),
+              isLoading
+                  ? SizedBox(
+                height: 300,
+                width: double.infinity,
+                child: Center(
+                  child: SizedBox(
+                    height: 50,
+                    width: 50,
+                    child: CircularProgressIndicator(),
+                  ),
+                ),
+              )
+                  : SizedBox(
+                height: 300,
+                width: double.infinity,
+                child: Image.network(
+                  imgUrl,
+                  fit: BoxFit.cover,
                 ),
               ),
-            )
-                : Container(
-              height: 400,
-              width: MediaQuery.of(context).size.width,
-              child: Image.network(
-                imgUrl,
-                fit: BoxFit.cover,
-              ),
-            ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () async {
-                setState(() {
-                  isLoading = true;
-                });
-                await SaveMyData.saveData(memeNo! + 1);
-                GetInitMemeNo();
-                UpdateImg();
-              },
-              child: Container(
-                height: 50,
-                width: 150,
-                child: Center(
-                  child: Text(
-                    "More Fun!!",
-                    style: TextStyle(fontSize: 20),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () async {
+                  setState(() {
+                    isLoading = true;
+                  });
+                  await SaveMyData.saveData(memeNo! + 1);
+                  GetInitMemeNo();
+                  UpdateImg();
+                },
+                child: Container(
+                  height: 40,
+                  width: 200,
+                  child: Center(
+                    child: Text(
+                      "More Fun!!",
+                      style: TextStyle(fontSize: 20),
+                    ),
                   ),
                 ),
               ),
-            ),
-            Spacer(),
-            Text(
-              "APP CREATED BY",
-              style: TextStyle(fontSize: 20),
-            ),
-            Text(
-              "CODE WITH DHRUV",
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 10),
-          ],
+              SizedBox(height: 20),
+              Text(
+                "APP CREATED BY",
+                style: TextStyle(fontSize: 20),
+              ),
+              Text(
+                "KANISHKA ANAND",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 20),
+            ],
+          ),
         ),
       ),
     );
