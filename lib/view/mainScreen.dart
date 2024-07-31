@@ -103,7 +103,7 @@ class _MainScreenState extends State<MainScreen> {
               ),
               SizedBox(height: 20),
               Text(
-                "APP CREATED BY",
+                "App Created By",
                 style: TextStyle(fontSize: 20),
               ),
               Text(
