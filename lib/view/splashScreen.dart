@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
 
-
 class splashScreen extends StatelessWidget {
-  const splashScreen({super.key});
+  const splashScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Center(child: Column(
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.network("https://images.theconversation.com/files/38926/original/5cwx89t4-1389586191.jpg?ixlib=rb-4.1.0&q=45&auto=format&w=926&fit=clip"),
+          Image.network(
+              width : MediaQuery.of(context).size.width,
+              height : 300,
+              "https://raw.githubusercontent.com/codewithdhruv22/CodeWithDhruv/main/applogo.png"),
           SizedBox(height: 30,),
-          Text("SED LYF", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
-          Text("A Meme App !!"),
+          Text("UnSad App" , style: TextStyle(fontSize: 35 , fontWeight: FontWeight.bold),)
         ],
-      )),
+      ),
     );
   }
 }

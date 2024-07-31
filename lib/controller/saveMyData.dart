@@ -1,10 +1,11 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
-class Savemydata{
+class SaveMyData{
 
   static String memeKey = "MEMEKEY";
 
-  static Future<bool> saveData(int val)async{
+
+  static Future<bool> saveData(int val) async{
     final inst = await SharedPreferences.getInstance();
     return await inst.setInt(memeKey, val);
   }
@@ -13,4 +14,5 @@ class Savemydata{
     final inst = await SharedPreferences.getInstance();
     return await inst.getInt(memeKey);
   }
+
 }
