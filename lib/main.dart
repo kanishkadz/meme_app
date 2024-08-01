@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:meme_app/view/mainScreen.dart';
-import 'package:meme_app/view/splashScreen.dart';
+import 'package:meme_app/view/splashScreen.dart'; // Make sure this contains a SplashScreen widget
 
 void main() {
   runApp(const MyApp());
 }
-
-
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
@@ -17,18 +15,19 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   bool showSplash = true;
-  showSplashScreen(){
-    Future.delayed(Duration(seconds: 5),(){
+
+  @override
+  void initState() {
+    super.initState();
+    showSplashScreen();
+  }
+
+  void showSplashScreen() {
+    Future.delayed(Duration(seconds: 5), () {
       setState(() {
         showSplash = false;
       });
     });
-  }
-
-  @override
-  void initState() {
-    showSplashScreen();
-    super.initState();
   }
 
   @override
@@ -39,7 +38,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:  showSplash ? splashScreen() : MainScreen(),
+      home: showSplash ? SplashScreen() : MainScreen(), // Ensure SplashScreen widget is used here
     );
   }
 }
