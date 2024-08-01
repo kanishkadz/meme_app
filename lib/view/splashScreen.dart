@@ -13,7 +13,7 @@ class SplashScreen extends StatelessWidget {
         children: [
           // Provide a valid URL for the image
           Image.network(
-            'https://preview.redd.it/3nu0molqwqw71.jpg?width=464&format=pjpg&auto=webp&s=994b0e087bab7c4df39f82c6c82194ee9e0b02b3', // Replace with your image URL
+            'https://hoor72.com/_next/image?url=https%3A%2F%2Fh72.s3.ap-south-1.amazonaws.com%2Fakshay-kumar-phir-hera-pheri-pose.png&w=828&q=75', // Replace with your image URL
             width: MediaQuery.of(context).size.width * 0.8, // Adjust width to 80% of screen width
             height: 300,
             fit: BoxFit.cover, // Adjust image fit
