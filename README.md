@@ -1,16 +1,21 @@
-# meme_app
+<h1>Meme App</h1>
 
-A new Flutter project.
+<p>Welcome to the <strong>Meme App</strong> developed by <strong>Kanishka Anand</strong>! This project is a fun and interactive application built using Flutter, where users can explore, share, and create memes in real-time with a sleek and minimal UI.</p>
 
-## Getting Started
+<h2>Features</h2>
+<ul>
+  <li><strong>Meme Feed</strong>: Browse a collection of trending and user-submitted memes.</li>
+  <li><strong>Meme Generator</strong>: Create your own memes with custom captions and share them instantly.</li>
+  <li><strong>Like and Share</strong>: Like, comment, and share memes with friends and social platforms.</li>
+  <li><strong>Search Memes</strong>: Find specific memes using keywords or popular tags.</li>
+  <li><strong>Minimal Design</strong>: A simple and fun interface for meme browsing and creation.</li>
+  <li><strong>Responsive UI</strong>: Optimized for both Android and iOS devices with smooth performance.</li>
+</ul>
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<h2>Tech Stack</h2>
+<ul>
+  <li><strong>Flutter</strong>: For building the cross-platform app.</li>
+  <li><strong>Firebase</strong>: For storing and managing meme data, user authentication, and real-time updates.</li>
+  <li><strong>Provider</strong>: State management solution for Flutter.</li>
+  <li><strong>Dart</strong>: Programming language used for Flutter development.</li>
+</ul>
